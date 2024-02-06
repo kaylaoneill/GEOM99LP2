@@ -18,7 +18,10 @@
 <script src="https://js.arcgis.com/4.28/"></script>
     <script>
       require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView) {
+        esriConfig.apiKey = "AAPK083b29b41afc46298bc840a35eafd097Qoz5w15o4Idm-t5lbQwTOrEDS14ERvGVLGuFAn5KSGTKKRn9MPM1I9XBqAO_1_yd";
 
+        const map = new Map({
+          basemap: "arcgis/topographic" // basemap styles service
       });
     </script>
     
