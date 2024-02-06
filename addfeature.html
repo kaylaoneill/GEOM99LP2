@@ -25,7 +25,8 @@
     "esri/layers/GraphicsLayer"
 
     ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer) {
-esriConfig.apiKey = "AAPK083b29b41afc46298bc840a35eafd097Qoz5w15o4Idm-t5lbQwTOrEDS14ERvGVLGuFAn5KSGTKKRn9MPM1I9XBqAO_1_yd";
+
+  esriConfig.apiKey = "AAPK083b29b41afc46298bc840a35eafd097Qoz5w15o4Idm-t5lbQwTOrEDS14ERvGVLGuFAn5KSGTKKRn9MPM1I9XBqAO_1_yd";
 
   const map = new Map({
     basemap: "arcgis/topographic" // basemap styles service
@@ -37,9 +38,11 @@ esriConfig.apiKey = "AAPK083b29b41afc46298bc840a35eafd097Qoz5w15o4Idm-t5lbQwTOrE
     zoom: 13,
     container: "viewDiv"
  });
-const graphicsLayer = new GraphicsLayer();
+
+ const graphicsLayer = new GraphicsLayer();
  map.add(graphicsLayer);
-const point = { //Create a point
+
+ const point = { //Create a point
     type: "point",
     longitude: -118.80657463861,
     latitude: 34.0005930608889
@@ -51,17 +54,36 @@ const point = { //Create a point
         color: [255, 255, 255], // White
         width: 1
     }
- });
-    const pointGraphic = new Graphic({
+ };
+
+ const pointGraphic = new Graphic({
     geometry: point,
     symbol: simpleMarkerSymbol
  });
  graphicsLayer.add(pointGraphic);
 
+ // Create a line geometry
+ const polyline = {
+    type: "polyline",
+    paths: [
+        [-118.821527826096, 34.0139576938577], //Longitude, latitude
+        [-118.814893761649, 34.0080602407843], //Longitude, latitude
+        [-118.808878330345, 34.0016642996246]  //Longitude, latitude
+    ]
+ };
+ const simpleLineSymbol = {
+    type: "simple-line",
+    color: [226, 119, 40], // Orange
+    width: 2
+ };
+
  });
 </script>
 </head>
 <body>
+  <div id="viewDiv"></div>
+</body>
+</html>
   <div id="viewDiv"></div>
 </body>
 </html>
