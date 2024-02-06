@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
+    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display your location</title>
 
     <style>
       html,
@@ -19,56 +19,53 @@
     <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
     <script src="https://js.arcgis.com/4.28/"></script>
 
+
     <script>
       require([
           "esri/config",
           "esri/Map",
           "esri/views/MapView",
           "esri/widgets/Locate",
-        
-          "esri/widgets/Track",
-          "esri/Graphic"
+          
+         
         ], function(
             esriConfig,
             Map,
             MapView,
             Locate,
-            Track,
-            Graphic
+           
         ) {
 
-        esriConfig.apiKey = "AAPK083b29b41afc46298bc840a35eafd097Qoz5w15o4Idm-t5lbQwTOrEDS14ERvGVLGuFAn5KSGTKKRn9MPM1I9XBqAO_1_yd";
+        esriConfig.apiKey = "AAPK4ab67dc463f84e38ab84366e78f1bbce7EuxkXY3tckcKs-V8ph5h2-vCH4grANGFina4VuOfXRN6W_cOCdyEUQRVug3N10p";
 
         const map = new Map({
           basemap: "arcgis/navigation"
         });
 
         const view = new MapView({
+          container: "viewDiv",
           map: map,
           center: [-40, 28],
           zoom: 2
         });
-const track = new Track({
+
+        const locate = new Locate({
           view: view,
-          graphic: new Graphic({
-            symbol: {
-              type: "simple-marker",
-              size: "12px",
-              color: "green",
-              outline: {
-                color: "#efefef",
-                width: "1.5px"
-              }
-            }
-          }),
-          useHeadingEnabled: false
+          useHeadingEnabled: false,
+          goToOverride: function(view, options) {
+            options.target.scale = 1500;
+            return view.goTo(options.target);
+          }
         });
-        view.ui.add(track, "top-left");
+        view.ui.add(locate, "top-left");
+
       });
     </script>
 
   </head>
   <body>
     <div id="viewDiv"></div>
+  </body>
+</html>
   </body>
 </html>
