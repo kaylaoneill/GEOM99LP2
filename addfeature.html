@@ -76,7 +76,11 @@
     color: [226, 119, 40], // Orange
     width: 2
  };
-
+const polylineGraphic = new Graphic({
+    geometry: polyline,
+    symbol: simpleLineSymbol
+ });
+ graphicsLayer.add(polylineGraphic);
  });
 </script>
 </head>
