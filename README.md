@@ -2,8 +2,9 @@
 
 Files in this repository:
 
+Requirement "ArcGIS Online Developers: Create a new empty layer"
 OnlineDevelopers.md 
-This is for requirement "ArcGIS Online Developers: Create a new empty layer"
+
 
 Requirement: "Explore and Enhance the Tutorials for ArcGIS JavaScript API"
 my2D.html- "Display a map 2D"
