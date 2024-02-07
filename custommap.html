@@ -1,1 +1,42 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a Web Map</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.28/"></script>
+
+  <script>
+    require([
+      "esri/config",
+      "esri/Map",
+      "esri/WebMap",
+      "esri/views/MapView",
+      "esri/widgets/ScaleBar",
+      "esri/widgets/Legend"
+    ], function(esriConfig, WebMap, MapView, ScaleBar, Legend) {
+
+    esriConfig.apiKey = "AAPK083b29b41afc46298bc840a35eafd097Qoz5w15o4Idm-t5lbQwTOrEDS14ERvGVLGuFAn5KSGTKKRn9MPM1I9XBqAO_1_yd";
+
+      const webmap = new WebMap({
+        portalItem: {
+          id: "fa2f20d14b6a40fe9187bf92da39ea0b"
+        }
+      });
+
+  });
+  </script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
