@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -32,16 +31,26 @@
           id: "fa2f20d14b6a40fe9187bf92da39ea0b"
         }
       });
- const view = new MapView({
+
+      const view = new MapView({
         container: "viewDiv",
-   map: webmap
-    });
-  const legend = new Legend ({
+
+        map: webmap
+
+      });
+
+      const scalebar = new ScaleBar({
         view: view
       });
-      view.ui.add(legend, "top-right");    
+
+      view.ui.add(scalebar, "bottom-left");
+
+    const legend = new Legend ({
+        view: view
+      });
+      view.ui.add(legend, "top-right");
+
   });
-    
   </script>
 </head>
 <body>
