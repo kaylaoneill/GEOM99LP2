@@ -32,8 +32,16 @@
           id: "fa2f20d14b6a40fe9187bf92da39ea0b"
         }
       });
-
+ const view = new MapView({
+        container: "viewDiv",
+   map: webmap
+    });
+  const legend = new Legend ({
+        view: view
+      });
+      view.ui.add(legend, "top-right");    
   });
+    
   </script>
 </head>
 <body>
