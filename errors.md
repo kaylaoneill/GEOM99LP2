@@ -16,6 +16,6 @@ Errors with the update to ESRI causing the basemap to fail. Was expecting a map 
 ![Addfeatureerror2](https://github.com/kaylaoneill/GEOM99LP2/assets/146447016/48bb21b5-7396-4ab8-864e-294b693a4b6b)
 
 
-- [ ] custommap.html
+- [ ] custommap.html. Errors with ESRI causing the map to fail & not load
 ![custommaperror1](https://github.com/kaylaoneill/GEOM99LP2/assets/146447016/b59df562-3f80-4207-a7f5-890792fddbab)
 ![custommaperror2](https://github.com/kaylaoneill/GEOM99LP2/assets/146447016/b54666c4-2c57-4cab-9955-9833aa84d9fd)
