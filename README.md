@@ -10,7 +10,7 @@ Requirement: "Explore and Enhance the Tutorials for ArcGIS JavaScript API"
 - [ ] my2D.html- "Display a map 2D"
 - [ ] location.html- "Display your location" 
 - [ ] addfeature.html - "Add a point, line, and polyline" 
-
+- [ ] custommap.html - A custom map using a tutorial and enchanced to a webmap I created in ArcGIS Online. 
 - [ ] errors.md- This shows the errors for each of the above pages. Screenshots in the markdown doccument. 
 
 An example of the error is:
